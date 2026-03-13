@@ -1,0 +1,392 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+/* HEADER CENTRALIZADO */
+
+
+header {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    padding: 30px 0 15px 0;
+    text-align: center;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 220px;
+}
+
+/* MENU */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #feda4a;
+}
+
+/* SESSÃO HERÓI */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 100px;
+    gap: 60px;
+}
+
+/* TEXTO */
+
+.hero-text {
+    width: 45%;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    font-weight: 200;
+    letter-spacing: 6px;
+}
+
+.hero-text p {
+    margin: 25px 0;
+    font-weight: 300;
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* CARROSSEL AO LADO */
+
+.hero-carousel {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.hero-carousel img {
+    width: 100%;
+    height: 400px; /* mesma altura da div */
+    object-fit: cover;
+}
+.slides {
+    display: flex;
+    width: 400%;
+    animation: slide 18s infinite;
+}
+
+.slides img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* KEYFRAME CARROSSEL */
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+
+    100% { margin-left: 0; }
+}
+
+/* LINHA DIVISORA AMARELA */
+
+.divider {
+    height: 2px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    background: linear-gradient(
+            to right,
+            transparent,
+            #eaea02,
+            #eaea02,
+            #eaea02,
+            transparent
+    );
+}
+button {
+    padding: 14px 40px;
+    background: transparent;
+    border: 1px solid #feda4a;
+    color: #feda4a;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover {
+    background: #feda4a;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(254, 218, 74, 0.3);
+}
+/* PRODUTOS */
+
+.products {
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.products h2 {
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+}
+
+/* GRID */
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+
+.product-card {
+    width: 320px;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(6px);
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: #feda4a;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* PREÇOS */
+
+.preco-antigo {
+    color: #feda4a;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.parcelar {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.precopix {
+    background: black;
+    color: #feda4a;
+    padding: 8px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.consult {
+    color: #ccc;
+    margin: 20px 0;
+}
+
+/* BOTÃO PRODUTO */
+
+.product-card button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* DIVISÓRIA ENTRE HERO E PRODUTOS */
+
+.divider-products {
+    height: 2px;
+    width: 85%;
+    margin: 80px auto;
+    background: linear-gradient(
+            to right,
+            transparent,
+            #feda4a,
+            #feda4a,
+            transparent
+    );
+}
+
+/* TOPO DO MENU COM DUAS LOGOS */
+
+.menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+/* LOGO ESQUERDA */
+
+.logo-left img {
+    width: 80px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.logo-left img:hover {
+    transform: scale(1.1);
+}
+
+/* LOGO CENTRAL */
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-center img {
+    width: 200px;
+}
+/* ÍCONES DO LADO DIREITO */
+
+.icons-right {
+    display: flex;
+    gap: 25px;
+    font-size: 22px;
+    color: #feda4a;
+    cursor: pointer;
+}
+
+.icons-right i {
+    transition: 0.3s;
+}
+
+.icons-right i:hover {
+    transform: scale(1.2);
+    color: white;
+}
+/* LINHA DIVISÓRIA */
+
+.divider-news {
+    height: 2px;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: linear-gradient(
+            to right,
+            transparent,
+            #feda4a,
+            #feda4a,
+            transparent
+    );
+}
+
+/* NEWSLETTER */
+
+.novidade {
+    text-align: center;
+    padding: 40px 20px 100px 20px;
+}
+
+.novidade h2 {
+    font-weight: 200;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+.novidade p {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* FORM */
+
+.novidades-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.novidades-form input {
+    width: 320px;
+    padding: 14px;
+    background: transparent;
+    border: 1px solid #feda4a;
+    color: white;
+    font-family: inherit;
+}
+
+.novidades-form input::placeholder {
+    color: #aaa;
+}
+
+.novidades-form button {
+    padding: 14px 30px;
+}
+.rodape {
+    background-color: #b5b501;
+    color: #000000;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px; /* deixa um espaço entre o conteúdo da página e o rodapé */
+}
+
+.rodape p {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.linkconta{
+    color: #eaea02;
+}
